@@ -4,11 +4,14 @@ services:
     build:
       context: .
       dockerfile: frontend.Dockerfile
-    ports:
-      - "80:80"
+    network_mode: host
+    environment:
+      - PORT=80
 
   backend:
     build:
       context: .
       dockerfile: backend.Dockerfile
-    pid: host
+    network_mode: host
+    environment:
+      - PORT=3000

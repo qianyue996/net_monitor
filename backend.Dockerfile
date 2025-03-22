@@ -1,7 +1,7 @@
-FROM node:18 AS backend-builder
-RUN apt-get update && apt-get install -y iproute2
+FROM node:18-alpine
 WORKDIR /app/backend
 COPY app/backend ./
-RUN npm install
-EXPOSE 3000
-CMD bash net_monitor.sh & node server.js
+RUN npm install && apk add --no-cache iproute2
+ENV PORT=3000
+EXPOSE $PORT
+CMD sh net_monitor.sh & node server.js
