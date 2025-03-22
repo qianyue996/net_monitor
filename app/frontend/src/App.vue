@@ -41,7 +41,7 @@ export default {
 
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://192.168.11.99:3000/api');
+        const response = await axios.get('/api');
         netData.value = response.data;
       } catch (error) {
         console.error('Failed to fetch data:', error);
