@@ -31,4 +31,9 @@ node run dev
 未完成功能：
 
 1、进程显示
-2、Docker不能监听host网络进程
+
+### Docker（推荐！！！）
+```
+sudo docker compose build
+sudo docker compose up -d
+```
