@@ -1,6 +1,6 @@
 # 网络监控器
 
-## NetwordMonitor
+## NetworkMonitor
 
 **简单的实现对linux网速占用情况显示**
 
